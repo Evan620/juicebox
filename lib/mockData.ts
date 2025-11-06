@@ -36,6 +36,7 @@ export type Shortlist = {
   name: string
   description: string
   candidateIds: string[]
+  candidateCount: number
   createdAt: string
   updatedAt: string
   createdBy: string
@@ -240,6 +241,7 @@ export const MOCK_SHORTLISTS: Shortlist[] = [
     name: 'Senior Engineers - Q4 2024',
     description: 'Top senior engineering candidates for Q4 hiring',
     candidateIds: MOCK_CANDIDATES.slice(0, 15).map(c => c.id),
+    candidateCount: 15,
     createdAt: '2024-10-15T10:00:00Z',
     updatedAt: '2024-11-01T14:30:00Z',
     createdBy: 'John Doe',
@@ -249,6 +251,7 @@ export const MOCK_SHORTLISTS: Shortlist[] = [
     name: 'Mining Industry Specialists',
     description: 'Mechanical engineers with mining experience',
     candidateIds: MOCK_CANDIDATES.filter(c => c.industries.includes('Mining')).slice(0, 12).map(c => c.id),
+    candidateCount: 12,
     createdAt: '2024-10-20T09:00:00Z',
     updatedAt: '2024-10-28T16:45:00Z',
     createdBy: 'John Doe',
@@ -258,6 +261,7 @@ export const MOCK_SHORTLISTS: Shortlist[] = [
     name: 'Product Managers - SaaS',
     description: 'Experienced PMs from top SaaS companies',
     candidateIds: MOCK_CANDIDATES.filter(c => c.title.includes('Product')).slice(0, 10).map(c => c.id),
+    candidateCount: 10,
     createdAt: '2024-11-01T11:00:00Z',
     updatedAt: '2024-11-05T10:20:00Z',
     createdBy: 'John Doe',
